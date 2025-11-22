@@ -19,7 +19,7 @@ print(f'{N:x}')
 #перевод в любую систему (2 <= sys <= 9)
 def convert(num, sys):
     res = ''
-    while num != 0:
+    while num:
         res += str(num % sys)
         num //= sys
     return res[::-1]
@@ -46,3 +46,50 @@ print(int(num_bin, 2))
 print(int(num_tri, 3))
 
 print(int(num_hex, 16))
+
+#срезы
+data = '123456789'
+#извелечение первых двух символов
+print(data[:2])
+# извлечение без первых двух символов
+print(data[2:])
+#извлечение последних двух символов
+print(data[-2:])
+#извлечение без последних двух символов
+print(data[:-2])
+
+#сумма цифр числа
+#двоичная система
+num_1 = '101'
+sum_1 = num_1.count('1')
+
+#любая система до десятой включительно
+num_2 = '122'
+sum_2 = num_2.count('1') + num_2.count('2') * 2
+sum_2 = sum(map(int, num_2))
+print(sum_2)
+
+#любая система до 36й включительно
+num_3 = 'A'
+sum_3 = sum(map(lambda x: int(x, 36), num_3))
+
+def transform(let):
+    return let(int, 36)
+sum(map(transform, num_3))
+
+#нахождение овтета через список
+ans = []
+ans.append(r)
+print(min(ans)
+
+
+
+# замена цифр
+
+num = '12398'
+new_num = ''
+for i in num:
+    if i == '1'
+
+
+
