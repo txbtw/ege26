@@ -1,14 +1,6 @@
-
-from itertools import  combinations
-def f(x):
-    p = 1 <= x <= 39
-    q = 23 <= x <= 58
-    a =  a1 <= x <= a2
-    return (p <= (not q)) <= (not a)
-
-ans = []
-line = [x + eps for x in range(1, 59) for eps in (0, 0.1, 0.9)]
-for a1, a2 in combinations(line, 2):
-    if all(f(x) for x in line):
-        ans.append(a2-a1)
-print(max(ans))
+def f(x,y, z):
+    return (x | 50 == x) or (y & 34 != 0) or (z | 24 != 24) or (x*y*z > a // 8)
+for a in range(1, 1000)[::-1]:
+    if all(f(x,y, z) for x in range(1, 100) for y in range(1, 100) for z in range(1, 100)):
+        print(a)
+        break

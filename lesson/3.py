@@ -1,9 +1,7 @@
-from itertools import *
 
-cnt = 0
-for val in permutations('х*ч*н*б*дж*т'):
-    val = ''.join(val)
-    if '*****' not in val:
-        cnt += 1
-print(cnt)
-
+def f(x):
+    return (x & a == 0) <= ((x & 77 == 0) and (x & 44 == 0))
+for a in range(1, 1000):
+    if all(f(x) for x in range(1, 1000)):
+        print(a)
+        break
