@@ -1,6 +1,16 @@
-def f(x,y, z):
-    return (x | 50 == x) or (y & 34 != 0) or (z | 24 != 24) or (x*y*z > a // 8)
-for a in range(1, 1000)[::-1]:
-    if all(f(x,y, z) for x in range(1, 100) for y in range(1, 100) for z in range(1, 100)):
-        print(a)
-        break
+from itertools import combinations
+
+
+def f(x):
+    b = 54 <= x <= 120
+    c = 78 <= x <= 151
+    a = a1 <= x <= a2
+    return c <= ((b and (not a)) <= (not c))
+
+ans = []
+lineA = [54, 78, 120, 151]
+lineX = [55, 79, 121]
+for a1,a2 in combinations(lineA, 2):
+    if all(f(x) for x in lineX):
+        ans.append(a2-a1)
+print(min(ans))
