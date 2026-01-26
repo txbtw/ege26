@@ -1,9 +1,8 @@
-from itertools import *
-
-cnt = 0
-for val in permutations('х*ч*н*б*дж*т'):
-    val = ''.join(val)
-    if '*****' not in val:
-        cnt += 1
-print(cnt)
+ans = []
+numx = 5*343**2031 + 4*49**2142 - 3*7**111 + 7**222
+while numx:
+    if numx % 7 != 0:
+        ans.append(numx % 7)
+    numx //= 7
+print(sum(map(int, ans)))
 

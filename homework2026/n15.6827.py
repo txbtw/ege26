@@ -5,7 +5,7 @@ def f(x):
     r = 99 <= x <= 258
     a = a1 <= x <= a2
     return (a <= r) and ((not(a<=p)) <= q)
-line = [x + eps for x in range(5, 1001) for eps in (0, 0.1, 0.9)]
+line = [5, 99, 100, 257, 258, 1000]
 ans = []
 for a1,a2 in combinations(line, 2):
     if all(f(x) for x in line):

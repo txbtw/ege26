@@ -1,14 +1,16 @@
+from itertools import combinations
 
-from itertools import  combinations
+
 def f(x):
-    p = 1 <= x <= 39
-    q = 23 <= x <= 58
-    a =  a1 <= x <= a2
-    return (p <= (not q)) <= (not a)
+    b = 54 <= x <= 120
+    c = 78 <= x <= 151
+    a = a1 <= x <= a2
+    return c <= ((b and (not a)) <= (not c))
 
 ans = []
-line = [x + eps for x in range(1, 59) for eps in (0, 0.1, 0.9)]
-for a1, a2 in combinations(line, 2):
-    if all(f(x) for x in line):
+lineA = [54, 78, 120, 151]
+lineX = [55, 79, 121]
+for a1,a2 in combinations(lineA, 2):
+    if all(f(x) for x in lineX):
         ans.append(a2-a1)
-print(max(ans))
+print(min(ans))
