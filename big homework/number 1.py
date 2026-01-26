@@ -6,3 +6,4 @@ print(*range(1, 9))
 for i in permutations('abcdefgh'):
     if all(str(i.index(x) + 1) in mtrx[i.index(y)] for x, y in graph):
         print(*i)
+        h

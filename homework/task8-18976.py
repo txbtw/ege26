@@ -4,7 +4,7 @@ cnt = 0
 for val in product(printable[:20], repeat=5):
     val = ''.join(val)
     for i in printable[:20]:
-        if i % 2 == 0:
+        if int(i, 20) % 2 == 0:
             val = val.replace(i, '*')
         else:
             val = val.replace(i, '+')

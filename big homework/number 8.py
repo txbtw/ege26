@@ -12,3 +12,4 @@ for val in product(printable[:8], repeat=5):
         if '**' not in val and '++' not in val:
             cnt += 1
 print(cnt)
+h

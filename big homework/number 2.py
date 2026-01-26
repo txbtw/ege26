@@ -12,3 +12,4 @@ for i in product((0, 1), repeat=5):
         for p in permutations('xwyz'):
             if [f(**dict(zip(p, t))) for t in table] == [1, 1, 1]:
                 print(*p)
+                h
