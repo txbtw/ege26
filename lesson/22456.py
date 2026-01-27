@@ -11,5 +11,7 @@ for n in range(1, 100000):
     if r > 271:
         print(n)
         break
+        
+
 
 

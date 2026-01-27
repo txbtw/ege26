@@ -3,6 +3,9 @@
 # подключение всех команд из модуля turtle
 from turtle import *
 
+#библиотека черепахи
+import turtle
+
 
 
 # Изменение размера крана
@@ -10,7 +13,7 @@ from turtle import *
 screensize(3000, 3000)
 
 # Отключение анимации
-tracer(False
+tracer(False)
 
 # Обновление экрана после отключения анимации
 update()

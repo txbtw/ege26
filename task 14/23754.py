@@ -9,5 +9,5 @@ def convert(num, sys):
 for x in range(1, 3001):
     num = convert(9 * 11 ** 210 + 8 * 11 ** 150 - x, 11)
     if num.count('0') == 60:
-        print(x)
+        print(int(x))
 #asn = 2992

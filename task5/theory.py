@@ -80,7 +80,7 @@ sum(map(transform, num_3))
 #нахождение овтета через список
 ans = []
 ans.append(r)
-print(min(ans)
+print(min(ans))
 
 
 
@@ -89,7 +89,17 @@ print(min(ans)
 num = '12398'
 new_num = ''
 for i in num:
-    if i == '1'
+    if i == '1':
+        new_num += '3'
+    elif i == '3':
+        new_num += '1'
+    else:
+        new_num += i
+print(num)
+print(new_num)
+print()
+
+
 
 
 
