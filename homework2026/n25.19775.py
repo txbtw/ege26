@@ -12,10 +12,9 @@ def f(num):
             if if_prime(i): d |= {i}
             if if_prime(num // i): d |= {num // i}
 
-    if len(d) > 1:
-        m = min(d) + max(d)
-        if m % 145 == 0:
-            return m
+    s = sum(d)
+    if s % 145 == 0:
+        return s
     return 0
 cnt = 0
 for n in range(32_500_001, 10**20):
