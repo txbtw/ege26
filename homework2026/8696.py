@@ -3,8 +3,13 @@ def f(num):
     for i in range(2, int(num ** .5) + 1):
         if num % i == 0:
             d |= {i, num // i}
-    return d
-print(f(10))
+    if len(d) == 0:
+        return 0
+    m = sum(d)
+    if isprime(m % 100000):
+        return m
+    return 0
+
 def isprime(num):
     if num < 2: return False
     for i in range(2, int(num ** .5) + 1):
@@ -14,9 +19,8 @@ def isprime(num):
 
 cnt = 0
 for n in range(1_273_547, 10**20):
-    m = f(n)
-    if m % 100 == isprime():
-        print(n, m)
+    if i := f(n):
+        print(n, i)
         cnt += 1
         if cnt  == 5:
             break
