@@ -12,4 +12,4 @@ for i in range(3_333_338, 10**20):
         print(i, r)
         cnt += 1
         if cnt == 5:
-            break
+            breakkjh

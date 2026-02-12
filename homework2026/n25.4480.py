@@ -13,7 +13,7 @@ for n in range(800_001, 10**20):
         print(n, m)
         cnt += 1
         if cnt == 6:
-            break
+            breakjk
 
 
 
