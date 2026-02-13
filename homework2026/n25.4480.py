@@ -1,19 +1,22 @@
+from math import prod
+
 def f(num):
     d = set()
+    result = 1
     for i in range(1, int(num ** .5) + 1):
         if num % i == 0:
             d |= {i, num // i}
-    if (sum(d) and len(d) % 2) != 0:
-        return d
+    if sum(d)  % 2 != 0 and prod(d) % 2 != 0:
+        if len(d) > 10:
+            return len(d)
     return 0
 cnt = 0
 for n in range(800_001, 10**20):
-    m = f(n)
-    if m > 10:
+    if m := f(n):
         print(n, m)
         cnt += 1
         if cnt == 6:
-            breakjk
+            break
 
 
 

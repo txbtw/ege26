@@ -1,14 +1,7 @@
-from itertools import *
-cnt = 0
-for val in product('012345678', repeat=7):
-    val = ''.join(val)
-    if val[0] != '0' and '2' not in val:
-        if len(set(val)) == len(val):
-            for i in '012345678':
-                if int(i, 9) % 2 == 0:
-                    val = val.replace(i, '*')
-                else:
-                    val = val.replace(i, '+')
-            if '**' not in val and '++' not in val:
-                cnt += 1
-print(cnt)
+def f(x, y):
+    return not((x < 7) or (y >= 5 * x + a - 60) or (x >= 36) or (y < 225))
+
+for a in range(0, 1000)[::-1]:
+    if all(not f(x, y) for x in range(0, 1000) for y in range(0, 1000)):
+        print(a)
+        break
