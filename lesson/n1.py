@@ -1,18 +1,4 @@
-def convert(num, sys):
-    res = ''
-    while num:
-        res += str(num % sys)
-        num //= sys
-    return res[::-1] if res else '0'
-ans = []
-for n in range(0, 100000):
-    r = convert(n, 4)
-    if n % 2 == 0:
-        r = '12' + r + convert(int(r[-1]) * 3, 4)
-    else:
-        r = '13' + r + '21'
-    r = int(r, 4)
-    if r > 50:
-        ans.append(r)
-print(min(ans))
+from ipaddress import ip_network
 
+ipnet = ip_network('42.172.106.203/255.255.252.0', 0)
+print(ipnet[-2])
