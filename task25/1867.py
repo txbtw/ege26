@@ -12,8 +12,4 @@ def f(num):
 cnt = 0
 for n in range(500001, 10**20):
     m = f(n)
-    if  m:
-        print(n, m)
-        cnt += 1
-        if cnt == 5:
-            break
+    if  m % 100 ==
