@@ -13,14 +13,12 @@ def fact(num):
 
     if num > 2:
         d += [num]
-    if len(d) == 2:
-        prod(d)
+
     return d
-from math import prod
 cnt = 0
 for i in range(1_324_727 + 1, 10**20):
     m = fact(i)
-    if str(m).count('5') == 1:
+    if  len(m) == 2 and all(str(x).count('5') == 1 for x in m):
         print(i, max(m))
         cnt += 1
         if cnt == 5:
