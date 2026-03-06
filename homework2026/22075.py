@@ -1,7 +1,12 @@
-def f(x, y):
-    if str(x)[0] == str(y)[0]:
-        return x, y
+def DIG(x, y):
+    return str(x)[0] == str(y)[0]
 
-for x, a in range(1, 1000):
-    if all(f(not(x, 28)) and f(x, 47) <= f(x > a - 20)):
-        
+
+def f(x):
+    return (not DIG(x, 28) and DIG(x, 47)) <= (x > A - 20)
+
+
+for A in range(1, 1000)[::-1]:
+    if all(f(x) for x in range(1, 1000)):
+        print(A)
+        break
