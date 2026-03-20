@@ -1,16 +1,9 @@
-from itertools import combinations
+from string import *
 
-
-def f(x):
-    b = 54 <= x <= 120
-    c = 78 <= x <= 151
-    a = a1 <= x <= a2
-    return c <= ((b and (not a)) <= (not c))
-
-ans = []
-lineA = [54, 78, 120, 151]
-lineX = [55, 79, 121]
-for a1,a2 in combinations(lineA, 2):
-    if all(f(x) for x in lineX):
-        ans.append(a2-a1)
-print(min(ans))
+for x in printable[:22]:
+    num1 = int(f'56{x}c20', 22)
+    num2 = int(f'89f{x}2', 22)
+    num3 = int(f'h24{x}k21', 22)
+    num = num1 + num2 + num3
+    if num % 21 == 0:
+        print(num // 21)

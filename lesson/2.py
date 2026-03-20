@@ -1,11 +1,35 @@
-
-ans = []
-for n in range(1, 1000):
-    r = f'{n:b}'
-    if n % 3 == 0:
-        r += r[-3:]
-    else:
-        r += bin(n % 3 * 3)[2:]
-    r = int(r, 2)
-    ans.append([abs(130 - r), n])
-print(sorted(ans)[:10])
+from turtle import *
+screensize(5000, 5000)
+tracer(False)
+lt(90)
+m = 15
+for i in range(4):
+    fd(36 * m)
+    rt(90)
+    fd(41* m)
+    rt(90)
+up()
+rt(90)
+fd(20* m)
+lt(90)
+fd(90* m)
+down()
+for i in range(4):
+    fd(25* m)
+    rt(90)
+up()
+fd(7* m)
+lt(90)
+fd(7* m)
+rt(90)
+down()
+for i in range(7):
+    fd(16* m)
+    rt(90)
+up()
+for x in range(-15, 50):
+    for y in range(50, 150):
+        goto(x * m, y * m)
+        dot(3, 'red')
+update()
+done()
