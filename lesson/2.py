@@ -1,14 +1,35 @@
-from itertools import *
-cnt = 0
-for val in product('012345678', repeat=7):
-    val = ''.join(val)
-    if val[0] != '0' and '2' not in val:
-        if len(set(val)) == len(val):
-            for i in '012345678':
-                if int(i, 9) % 2 == 0:
-                    val = val.replace(i, '*')
-                else:
-                    val = val.replace(i, '+')
-            if '**' not in val and '++' not in val:
-                cnt += 1
-print(cnt)
+from turtle import *
+screensize(5000, 5000)
+tracer(False)
+lt(90)
+m = 15
+for i in range(4):
+    fd(36 * m)
+    rt(90)
+    fd(41* m)
+    rt(90)
+up()
+rt(90)
+fd(20* m)
+lt(90)
+fd(90* m)
+down()
+for i in range(4):
+    fd(25* m)
+    rt(90)
+up()
+fd(7* m)
+lt(90)
+fd(7* m)
+rt(90)
+down()
+for i in range(7):
+    fd(16* m)
+    rt(90)
+up()
+for x in range(-15, 50):
+    for y in range(50, 150):
+        goto(x * m, y * m)
+        dot(3, 'red')
+update()
+done()
