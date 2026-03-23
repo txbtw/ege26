@@ -17,4 +17,4 @@ for n in range(1, 10000):
     r = int(r, 5)
     if r > 370:
         ans += [r, n]
-print(min(ans))
+print(min(ans))k
