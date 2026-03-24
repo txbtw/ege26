@@ -1,5 +1,9 @@
-def f(s, e):
-    if s == e: return 1
-    if s < e: return 0
-    return f(s - 3, e) + f(s * (-3), e)
-print(f(333, ))
+def f(start, cnt=0):
+    if start == 13:
+        if start < 0:
+            return {start}
+        return set()
+    return f(start - 3, cnt + 1) | f(start * (-3), cnt + 1)
+
+ans = f(333)
+print(len(ans))
