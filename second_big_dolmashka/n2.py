@@ -11,4 +11,4 @@ for i in product((0, 1), repeat=5):
     if len(set(table)) == len(table):
         for p in permutations('xwyz'):
             if [f(**dict(zip(p, t))) for t in table] == [1, 0, 0]:
-                print(*pl)
+                print(*p)
