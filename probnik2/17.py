@@ -9,4 +9,4 @@ for num1, num2 in zip(data, data[1:]):
     u3 = (num1 + num2) % maxx == 0
     if (u1 + u2) == 1 and u3:
         ans.append(num1 + num2)
-print(ans)
+print(len(ans), max(ans))
