@@ -108,7 +108,7 @@ def fact_3(num):
             num //= i
         i += 2
 
-    if num > 2:
+    if num > 1:
         d += [num]
 
     return d
