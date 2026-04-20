@@ -1,4 +1,4 @@
-
+ans = []
 for x in range(1, 9431):
     num = 39**483 + 39**235 - x
     cnt = 0
@@ -6,4 +6,5 @@ for x in range(1, 9431):
         if num % 39 == 0:
             cnt += 1
         num //= 39
-print(cnt)
+    ans.append(cnt)
+print(max(ans))
