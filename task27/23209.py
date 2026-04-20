@@ -16,8 +16,8 @@ cluster_a_2 = [dot for dot in dots if dot[1] > 15]
 center_a_1 = cen(cluster_a_1)
 center_a_2 = cen(cluster_a_2)
 
-print(max(center_a_1[0], center_a_2[0]) * 10000)
-print(max(center_a_1[1], center_a_2[1]) * 10000)
+print(max(center_a_1[0] , center_a_2[0]) * 10000)
+print(max(center_a_1[1] , center_a_2[1]) * 10000)
 
 
 
