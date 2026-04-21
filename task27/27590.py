@@ -10,8 +10,8 @@ def anticen(cluster):
 with open(r'.\files\27590_a.txt') as file:
     dots = [list(map(float, i.replace(',', '.').split())) for i in file]
 
-cluster_1 = [dot for dot in dots if dot[0] < 8]
-cluster_2 = [dot for dot in dots if dot[0] > 8]
+cluster_1 = [dot for dot in dots if dot[1] < 8]
+cluster_2 = [dot for dot in dots if dot[1] > 8]
 
 center_1 = anticen(cluster_1)
 center_2 = anticen(cluster_2)
@@ -36,4 +36,5 @@ cen_3 = [anticen(cluster_3)]
 print(max(cen_1))
 print(max(cen_2))
 print(max(cen_3))
+
 
