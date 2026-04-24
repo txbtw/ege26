@@ -36,5 +36,30 @@ while dots:
                 dots.remove(d)
     if len(cluster) > 10:
         clusters.append(cluster)
-centers = [center(cluster) for cluster in clusters]
-print((centers[2][0]) * 10000)
+print([len(cluster) for cluster in clusters])
+
+print(max(clusters[2], key=lambda x: x[0])[0] * 10000)
+
+max_x = -10**10
+
+for i in clusters[2]:
+    max_x = max(max_x, i[0])
+print(max_x*10000)
+
+dists = []
+for dot in clusters[0]:
+    sum_dist = sum(dist(dot, d) for d in clusters[1] + clusters[2])
+    dists.append([sum_dist, dot])
+
+for dot in clusters[1]:
+    sum_dist = sum(dist(dot, d) for d in clusters[0] + clusters[2])
+    dists.append([sum_dist, dot])
+
+for dot in clusters[2]:
+    sum_dist = sum(dist(dot, d) for d in clusters[1] + clusters[0])
+    dists.append([sum_dist, dot])
+
+print(sum(max(dists)[1]))
+
+
+
