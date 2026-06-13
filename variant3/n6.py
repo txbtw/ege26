@@ -19,7 +19,7 @@ down()
 for i in range(4):
     fd(83 * m)
     rt(90)
-    fd(77)
+    fd(77* m)
     rt(90)
 
 up()
