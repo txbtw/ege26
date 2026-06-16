@@ -7,7 +7,7 @@ for line in data:
     if sorted(amount) == [1, 2, 2, 2]:
         ne_pov = [i for i in line if line.count(i) == 1]
         pov = [i for i in line if line.count(i) > 1]
-        line = sorted(line)
+        pov = sorted(pov)
         if (pov[0] + pov[-1]) / 2 < ne_pov[0]:
             cnt += 1
 print(cnt)
